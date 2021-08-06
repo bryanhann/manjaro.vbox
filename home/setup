@@ -1,13 +1,13 @@
 # This file should be copied to [${HOME}]
 src=https://github.com/bryanhann/manjaro.vbox
 dst=~/manjaro.vbox
-echo '-->' setup git src: ${src}
-echo '-->' setup git dst: ${dst}
+echo '-->' setup src: ${src}
+echo '-->' setup dst: ${dst}
 echo '-->' cloning.
 [ -d ${dst} ] || git clone ${src} ${dst}
-echo '--> ' cd to ${dst}
+echo '-->' $ cd ${dst}
 cd ${dst}
-echo '--> ' updating repo
+echo '--> ' $ git pull
 git pull
 echo '--> ' running ./main.sh
 ./main.sh
