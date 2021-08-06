@@ -1,0 +1,10 @@
+echo checking for virtualbox-guest-utils...
+
+pacman -Q | grep virtualbox-guest-utils || {
+    echo no utils
+    sudo pacman -Sy virtualbox-guest-utils
+    echo Reboot is needed. Rebooting in ten seconds.
+    sleep 10
+    shutdown -r now
+}
+
